@@ -1,6 +1,6 @@
 #!/bin/sh
 #SBATCH --job-name=job_squad_bert
-#SBATCH -o /mnt/nfs/work1/miyyer/kalpesh/projects/squash-generation/logs/log_squad_bert.txt
+#SBATCH -o cd /home/askaydevs/project_solverminds/solverminds/squash-root/squash-generation/logs/log_squad_bert.txt
 #SBATCH --time=167:00:00
 #SBATCH --partition=1080ti-long
 #SBATCH --gres=gpu:1
@@ -8,9 +8,9 @@
 #SBATCH --mem=45GB
 #SBATCH -d singleton
 
-cd /mnt/nfs/work1/miyyer/kalpesh/projects/squash-generation
+cd /home/askaydevs/project_solverminds/solverminds/squash-root/squash-generation
 
-export SQUAD_DIR=/mnt/nfs/work1/miyyer/datasets/SQuAD
+export SQUAD_DIR=/mnt/datasets/squad-v2.0/
 
 python question-answering/run_squad.py \
   --bert_model bert-base-uncased \
