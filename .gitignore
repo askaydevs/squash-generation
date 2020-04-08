@@ -18,3 +18,5 @@ question-generation/gpt2_question_generation
 question-generation/gpt_question_generation
 data/question-classifier/save
 data/question-classifier/save_best
+.ipynb_checkpoints/
+*.ipynb
